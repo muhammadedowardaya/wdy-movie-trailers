@@ -1,0 +1,42 @@
+.movie-genre__container {
+    padding:8px;
+}
+.movie-genre__title {
+    padding:10px 0;
+    color:#fff;
+    text-align: center;
+    font-size:12px;
+}
+.movie-genre__content {
+    display: flex;
+    flex-wrap: wrap;
+    padding:5px;
+    background: #fff;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.movie-genre__content a {
+    /* background-color: #78C1F3; */
+    border:1px solid #78C1F3;
+    text-decoration: none;
+    color:#78C1F3;
+    box-sizing: border-box;
+    position:relative;
+    font-weight: 900;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    padding:4px 8px 6px 8px;
+    margin:2px;
+    font-size:10px;
+}
+
+.movie-genre__content a:hover {
+    color:#fff;
+    background-color: #78C1F3;
+    text-shadow: none;
+} 

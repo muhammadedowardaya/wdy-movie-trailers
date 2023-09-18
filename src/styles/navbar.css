@@ -1,0 +1,122 @@
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 12px;
+	/* border: 1px solid #fff; */
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 30;
+    background:#001F3F;
+	/* background-color: #102c57; */
+	/* background: #0C356A; */
+}
+.navbar > .nav-brand {
+	color: #fff;
+	font-weight: 900;
+	padding: 0 10px;
+}
+
+.navbar > .burger-menu {
+	cursor: pointer;
+	padding: 5px;
+	color: #fff;
+	position: relative;
+	margin-right: 20px;
+}
+.navbar ul {
+	position: absolute;
+	top: 50px;
+	left: -1px;
+	z-index: 30;
+	width: 100%;
+}
+
+.navbar > ul > li {
+	width: 105%;
+	list-style: none;
+	/* box-shadow: 1px 1px 1px #999; */
+	/* box-shadow: 1px 1px 1px #fff; */
+	position: relative;
+	left: -105vw;
+	/* background: #102c57; */
+	background: #001F3F;
+	/* border:1px solid #ADC4CE; */
+	/* border: 1px solid #fff; */
+	border-top-right-radius: 1rem;
+	border-bottom-right-radius: 1rem;
+	cursor: pointer;
+	/* box-shadow: 0 2px 5px #ff0; */
+}
+
+.navbar > ul > li:hover {
+	background: #FFD700;
+	/* background: #fbe555; */
+}
+
+.navbar > ul > li.active {
+	background: #FFD700;
+	/* background: #fbe555; */
+    /* background: #FFD700; */
+}
+
+.navbar > ul > li:hover .nav-item {
+	color: #102c57;
+}
+
+.navbar > ul > li.active .nav-item {
+	color: #102c57;
+    /* color: #FFD700; */
+}
+
+.navbar > ul > li a {
+	text-decoration: none;
+	/* color: #fbe555; */
+    /* color:#FFD700; */
+    color:#fff;
+	font-weight: 600;
+	/* text-shadow: 1px 1px 1px #333; */
+	padding: 5px 20px;
+	width: 100%;
+	display: block;
+}
+
+@media screen and (min-width: 600px) {
+	.navbar {
+		justify-content: space-between;
+		padding: 25px;
+	}
+
+	.navbar > ul,
+	.navbar > ul.active {
+		display: flex;
+		position: unset;
+		width: max-content;
+	}
+
+	.navbar > ul > li,
+	.navbar > ul.active > li {
+		position: unset !important;
+		left: 0 !important;
+		width: max-content;
+		/* border: 1px solid #fbe555; */
+		border-top-right-radius: 1rem;
+		border-bottom-right-radius: 1rem;
+		border-top-left-radius: 1rem;
+		border-bottom-left-radius: 1rem;
+		/* box-shadow: none; */
+		margin: 0 12px;
+		transform: translate(0, 0) !important;
+	}
+
+	.navbar > ul > li > a,
+	.navbar > ul.active > li > a {
+		padding: 4px 20px;
+	}
+
+	.navbar > .burger-menu {
+		display: none;
+	}
+}

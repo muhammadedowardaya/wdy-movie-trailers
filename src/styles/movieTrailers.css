@@ -1,0 +1,42 @@
+.movie-trailers {
+	display: flex;
+	justify-content: center;
+	align-items: end;
+	flex-wrap: wrap;
+	gap: 40px;
+	background: #001f3f;
+	padding: 10px;
+}
+
+.movie-trailers__item {
+	width: 300px;
+}
+
+.movie-trailers__item-title {
+	color: #fff;
+	margin: 10px 0;
+	font-size: 12px;
+}
+
+.movie-trailers__item iframe {
+	width: 100%;
+	display: none;
+}
+
+.movie-trailers__item iframe.active {
+	display: block;
+	box-shadow: 0 4px 4px #ff0, 0 0px 5px #ff0;
+}
+
+.movie-trailers__item .loading-video {
+	width: 100%;
+	border: 1px solid #333;
+	height: 150px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@media (max-width: 400px) {
+
+}

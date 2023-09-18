@@ -1,0 +1,86 @@
+/*The starting point of text to animate*/
+#animatedText {
+	width: 100%;
+}
+#animatedText.slider-nav-animation .slider-container .custom-animated-text {
+	opacity: 0.25;
+	transform: scale(0.25);
+	transition: opacity 1.5s ease-in-out, transform 0.95s ease-in-out;
+	transition-delay: 0.5s;
+	text-align: center;
+	background-color: #fbe555;
+}
+/*The end of animation*/
+
+#animatedText.slider-nav-animation
+	.slider-container
+	.slide-visible
+	.custom-animated-text {
+	opacity: 1;
+	transform: none;
+}
+
+#container1.slider-container {
+	overflow: hidden;
+	position: relative;
+	border-top-right-radius: 1rem;
+	border-bottom-right-radius: 1rem;
+	border-top-left-radius: 1rem;
+	border-bottom-left-radius: 1rem;
+	border: 1px solid #fff;
+}
+
+#container1.slider-container li {
+	display: none;
+}
+
+#container1.slider-container li.active {
+	display: block;
+}
+
+button.slider-nav::after {
+	display: block;
+	font-size: 5px;
+	font-weight: 900;
+}
+
+/* .slider-nav-next {
+	transform: scaleX(-1);
+} */
+
+.movie-slider__title {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 1rem; /* Sesuaikan dengan ukuran font yang diinginkan */
+	color: white;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (min-width: 400px) {
+	.movie-slider__title {
+		font-size: 1.5rem;
+	}
+
+	.slider-nav {
+		transform: scale(1.5);
+	}
+}
+
+@media screen and (min-width: 800px) {
+	.movie-slider__title {
+		font-size: 2.5rem;
+	}
+
+	.slider-nav {
+		transform: scale(1.5);
+	}
+	.movie-header__slider {
+		margin-right: 20px;
+	}
+
+    #container1.slider-container {
+        margin-top:40px;
+    }
+}

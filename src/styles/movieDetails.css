@@ -1,0 +1,125 @@
+.movie-details {
+	background: #001f3f;
+	color: #fff;
+	padding-top: 30px;
+}
+.movie-details > h1 {
+	font-size: 32px;
+	text-align: center;
+	margin-bottom: 15px;
+	color: #ffd700;
+	font-weight: 800;
+}
+
+.movie-details_content {
+	padding: 16px;
+}
+.movie-details > .movie-details_content > .related-videos {
+	margin-top: 5px;
+	background: #001f3f;
+}
+.movie-details .related-videos .related-videos__title {
+	margin-bottom: 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.movie-details .related-videos .related-videos__title > hr {
+	background-color: #ffd700;
+	padding: 2px;
+	opacity: 0;
+	width: 0;
+}
+.movie-details .related-videos .related-videos__title > h3 {
+	padding: 10px 0;
+	font-size: 24px;
+	color: #ffd700;
+	text-align: center;
+    margin-top:40px;
+}
+.movie-details_content > .info td.genres {
+	padding: 4px unset;
+	display: flex;
+	flex-wrap: wrap;
+}
+.movie-details_content .genres a {
+	text-decoration: none;
+	padding: 4px 8px;
+	color: #fff;
+	/* background: #FFD700; */
+	margin: 2px;
+	font-size: 12px;
+	/* text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1); */
+	font-weight: 600;
+	border: 1px solid #fff;
+}
+
+.movie-details_content .genres a:hover {
+	color: #fff;
+	color: #333;
+	background: #ffd700;
+}
+
+.movie-details_content > .info > table {
+	width: 100%;
+	margin-bottom: 20px;
+	border-collapse: collapse;
+	border: 1px solid #fff;
+}
+
+.movie-details_content > .info > table tr {
+	display: flex;
+	border: 1px solid #fff;
+	border-left: none;
+	border-top: none;
+	/* border-bottom: none; */
+}
+
+.movie-details_content > .info > table th {
+	padding-right: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	text-align: start;
+	vertical-align: middle;
+	color: #fff;
+	flex-basis: 30%;
+	border: 1px solid #fff;
+	border-top: none;
+	border-bottom: none;
+	border-left: none;
+}
+
+.movie-details_content > .info > table td {
+	flex-basis: 40%;
+	color: #fff;
+	padding-right: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	vertical-align: middle;
+}
+
+@media (max-width: 400px) {
+	.movie-details_content > .info > table th,
+	.movie-details_content > .info > table td,
+	.movie-details_content > .info > table tr {
+		display: block;
+		width: 100%;
+		box-sizing: border-box;
+	}
+
+	.movie-details_content > .info > table tr {
+		padding: 5px 0;
+	}
+
+	.movie-details_content > .info > table td {
+		padding: 1px 10px;
+	}
+
+	.movie-details .related-videos .related-videos__title {
+		margin: 40px 0 50px;
+	}
+}
+
