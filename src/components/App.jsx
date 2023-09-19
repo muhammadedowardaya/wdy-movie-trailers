@@ -25,6 +25,8 @@ export default function App() {
 
 	const [movies, setMovies] = useState({});
 
+	const [animateTitle, setAnimateTitle] = useState(null);
+
 	useEffect(() => {
 		// ---------
 		const handleOnline = () => {
@@ -46,53 +48,57 @@ export default function App() {
 
 	useEffect(() => {
 		// animasi
-		const titleUnderline = document.querySelector(
-			"#movie-list__title-underline"
-		);
-		const titleText = document.getElementById("movie-list__title");
-
-		if (titleUnderline && titleText) {
-			const splitTitleText = new Splitting({
-				target: titleText,
-			});
-			// Animasikan teks menggunakan GSAP
-			const chars = splitTitleText[0].chars;
-
-			const animate = gsap.from(chars, {
-				duration: 1,
-				opacity: 0,
-				y: 50,
-				stagger: 0.1, // Stagger animasi untuk setiap karakter
-				repeatDelay: 4,
-				onComplete: () => {
-					const textUnderline = gsap.to(titleUnderline, {
-						width: 200,
-						opacity: 1,
-						duration: 2,
-						onComplete: () => {
-							setTimeout(() => {
-								gsap.to(titleUnderline, {
-									opacity: 0,
-									onComplete: () => textUnderline.revert(),
-								});
-								const animateEnd = gsap.to(chars, {
-									duration: 1,
-									opacity: 0,
-									y: 50,
-									stagger: 0.1,
-									onComplete: () => {
-										animate.restart();
-									},
-								});
-							}, 2000);
-						},
-					});
-				},
-			});
-		}
 	}, [path]);
 
-	useEffect(() => {}, []);
+	useEffect(() => {
+		function animateText() {
+			const titleUnderline = document.querySelector(
+				"#movie-list__title-underline"
+			);
+			const titleText = document.getElementById("movie-list__title");
+
+			if (titleUnderline && titleText) {
+				const splitTitleText = new Splitting({
+					target: titleText,
+				});
+				// Animasikan teks menggunakan GSAP
+				const chars = splitTitleText[0].chars;
+
+				const animate = gsap.from(chars, {
+					duration: 1,
+					opacity: 0,
+					y: 50,
+					stagger: 0.1, // Stagger animasi untuk setiap karakter
+					repeatDelay: 4,
+					onComplete: () => {
+						const textUnderline = gsap.to(titleUnderline, {
+							width: 200,
+							opacity: 1,
+							duration: 2,
+							onComplete: () => {
+								setTimeout(() => {
+									gsap.to(titleUnderline, {
+										opacity: 0,
+										onComplete: () => textUnderline.revert(),
+									});
+									const animateEnd = gsap.to(chars, {
+										duration: 1,
+										opacity: 0,
+										y: 50,
+										stagger: 0.1,
+										onComplete: () => {
+											animate.restart();
+										},
+									});
+								}, 2000);
+							},
+						});
+					},
+				});
+			}
+		}
+        animateText()
+	}, []);
 
 	const links = [
 		{
