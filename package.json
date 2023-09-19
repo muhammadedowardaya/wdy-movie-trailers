@@ -19,10 +19,10 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.16.0",
-    "sort-by": "^1.2.0",
+    "sort-by": "^0.0.2",
     "splitting": "^1.0.6",
-    "sweetalert2": "^11.7.28",
-    "swiffy-slider": "^1.6.0"
+    "sweetalert2": "^11.6.13",
+    "swiper": "^10.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

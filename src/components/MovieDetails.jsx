@@ -73,49 +73,6 @@ export default function MovieDetails() {
 		const titleText = document.querySelector("#title-text");
 		const titleUnderline = document.querySelector("#title-underline");
 
-		if (titleText) {
-			const splitTitleText = new Splitting({ target: titleText });
-			let chars = splitTitleText[0].chars;
-
-			// Animasikan teks menggunakan GSAP
-			const animate = gsap.from(chars, {
-				duration: 1,
-				opacity: 0,
-				y: 50,
-				stagger: 0.1,
-				repeatDelay: 4,
-				onComplete: () => {
-					const textUnderline = gsap.to(titleUnderline, {
-						width: 200,
-						opacity: 1,
-						duration: 2,
-						onComplete: () => {
-							setTimeout(() => {
-								gsap.to(titleUnderline, {
-									opacity: 0,
-									onComplete: () => textUnderline.revert(),
-								});
-								const animateEnd = gsap.to(chars, {
-									duration: 1,
-									opacity: 0,
-									y: 50,
-									stagger: 0.1,
-									onComplete: () => {
-										animate.restart();
-									},
-								});
-							}, 2000);
-						},
-					});
-				},
-			});
-		}
-	}, [path]);
-
-	useEffect(() => {
-		const titleText = document.querySelector("#title-text");
-		const titleUnderline = document.querySelector("#title-underline");
-
 		if (titleText && titleUnderline) {
 			const splitTitleText = new Splitting({ target: titleText });
 			let chars = splitTitleText[0].chars;
