@@ -55,7 +55,14 @@ export default function MovieSlider({ movies }) {
 	return (
 		<Swiper navigation={true} modules={[Navigation]} className="mySwiper">
 			{movies &&
-				movies.map((item, index) => <SwiperSlide><img src={`https://image.tmdb.org/t/p/original/${item.backdrop_path}`} alt="" /></SwiperSlide>)}
+				movies.map((item, index) => (
+					<SwiperSlide key={index}>
+						<img
+							src={`https://image.tmdb.org/t/p/original/${item.backdrop_path}`}
+							alt={item.name}
+						/>
+					</SwiperSlide>
+				))}
 		</Swiper>
 	);
 }
